@@ -30,7 +30,7 @@
                 <form name="msForm" layout="row" layout-margin no-validate>
                     <md-input-container class="no-errors-spacer" flex>
                         <label>Message</label>
-                        <input ng-model="vm.text" autocomplete="off" required >
+                        <input ng-model="vm.text" ng-change="vm.onChange()" autocomplete="off" required >
                     </md-input-container>
                     
                     <md-button type="submit" ng-disabled="!msForm.$valid" ng-click="vm.send()">
